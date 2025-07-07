@@ -30,8 +30,8 @@
 
       # ----------- USER SETTINGS ----------- #
       userSettings = {
-        username = "theo";
-        name = "Theo Rode";
+        username = "elotan";
+        name = "Ethan Lotan";
 
       };
 
