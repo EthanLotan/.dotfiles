@@ -13,8 +13,7 @@ ster";
     };
 
     # git version of hyprland
-    # hyprland.url = "git+https://github.com/hypr
-wm/Hyprland?submodules=1";
+    # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     # hyprland-plugins = {
     #   url = "github:hyprwm/hyprland-plugins";
