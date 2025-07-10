@@ -5,8 +5,7 @@
     nixpkgs = { url = "nixpkgs/nixos-unstable"; }
 ;
     home-manager = {
-      url = "github:nix-community/home-manager/ma
-ster";
+      url = "github:nix-community/home-manager/master";
 
       # ensure nixpkgs version is consistent
       inputs = { nixpkgs.follows = "nixpkgs"; };
