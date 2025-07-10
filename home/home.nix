@@ -16,14 +16,17 @@
   ];
 
   home.username = userSettings.username;
-  home.homeDirectory = "/home/${userSettings.username}";
+  home.homeDirectory = "/home/${userSettings.user
+name}";
 
   home.stateVersion = "23.11"; # DONT CHANGE
 
-  # set config for nix-shell and home-manager nixpkgs
+  # set config for nix-shell and home-manager nix
+pkgs
   # nixpkgs.config.allowUnfree = true;
   nixpkgs.config = import ./nixpkgs-config.nix;
-  xdg.configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
+  xdg.configFile."nixpkgs/config.nix".source = ./
+nixpkgs-config.nix;
 
   home.packages = with pkgs; [
     google-chrome
@@ -68,7 +71,8 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
     DEFAULT_BROWSER = "${pkgs.firefox}/bin/firefox";
-    # DEFAULT_BROWSER = "${pkgs.google-chrome}/bin/google-chrome-stable";
+
+  # DEFAULT_BROWSER = "${pkgs.google-chrome}/bin/google-chrome-stable";
   };
 
   dconf.settings = {
@@ -124,19 +128,10 @@
 
   programs.git = {
     enable = true;
-    userName = "Theo Rode";
-    userEmail = "theorodester@gmail.com";
+    userName = "EthanLotan";
+    userEmail = "elotan@g.hmc.edu";
     extraConfig = {
       init.defaultBranch = "main";
-      safe.directory = [
-        "/home/theo/Documents/Obsidian_Vault"
-        "/home/theo/Documents/HMC/HMC_MATH019_Answer_Keys"
-        "/home/theo/Documents/HMC/HMC_Semester_2"
-        "/home/theo/Documents/HMC/HMC_Semester_3"
-        "/home/theo/Documents/HMC/HMC_Semester_4"
-        "/home/theo/Documents/Resume"
-        "/home/theo/Documents/CalTech/julia_retrieval/Retrieval"
-      ];
     };
   };
 
