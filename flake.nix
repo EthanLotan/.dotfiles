@@ -2,16 +2,19 @@
   description = "flake";
 
   inputs = {
-    nixpkgs = { url = "nixpkgs/nixos-unstable"; };
+    nixpkgs = { url = "nixpkgs/nixos-unstable"; }
+;
     home-manager = {
-      url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager/ma
+ster";
 
       # ensure nixpkgs version is consistent
       inputs = { nixpkgs.follows = "nixpkgs"; };
     };
 
     # git version of hyprland
-    # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    # hyprland.url = "git+https://github.com/hypr
+wm/Hyprland?submodules=1";
 
     # hyprland-plugins = {
     #   url = "github:hyprwm/hyprland-plugins";
@@ -19,7 +22,8 @@
     # };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, ... }@
+inputs:
     let
       lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
@@ -34,7 +38,6 @@
         name = "Ethan Lotan";
 
       };
-
       # ----------- THEME SETTINGS ---------- #
       theme = {
         # grayscale going from dark to light
@@ -61,6 +64,7 @@
         base09 = "fea3b5"; # pink
         base0A = "f3c969"; # gold
         base0B = "6ecefe"; # "7dcef7"; # light blue
+
         base0C = "a8ff60"; # green
         base0D = "7aa6da"; # dark blue
         base0E = "a284dc"; # purple
