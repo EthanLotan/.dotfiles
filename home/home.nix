@@ -16,17 +16,14 @@
   ];
 
   home.username = userSettings.username;
-  home.homeDirectory = "/home/${userSettings.user
-name}";
+  home.homeDirectory = "/home/${userSettings.username}";
 
   home.stateVersion = "23.11"; # DONT CHANGE
 
-  # set config for nix-shell and home-manager nix
-pkgs
-  # nixpkgs.config.allowUnfree = true;
+  # set config for nix-shell and home-manager nixpkgs
+  nixpkgs.config.allowUnfree = true;
   nixpkgs.config = import ./nixpkgs-config.nix;
-  xdg.configFile."nixpkgs/config.nix".source = ./
-nixpkgs-config.nix;
+  xdg.configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
 
   home.packages = with pkgs; [
     google-chrome
